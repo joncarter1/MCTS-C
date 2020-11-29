@@ -11,6 +11,7 @@
 		BC98BB4425706B2D00708F15 /* connect4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BC98BB4225706B2D00708F15 /* connect4.cpp */; };
 		BC98BB4825706E8D00708F15 /* test_connect4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BC98BB4725706E8D00708F15 /* test_connect4.cpp */; };
 		BC98BB4C25706ED300708F15 /* mcts.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BC98BB4A25706ED200708F15 /* mcts.cpp */; };
+		BC98BB4F2572B74800708F15 /* manual.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BC98BB4E2572B74800708F15 /* manual.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,6 +34,7 @@
 		BC98BB4725706E8D00708F15 /* test_connect4.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = test_connect4.cpp; sourceTree = "<group>"; };
 		BC98BB4A25706ED200708F15 /* mcts.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = mcts.cpp; sourceTree = "<group>"; };
 		BC98BB4B25706ED300708F15 /* mcts.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = mcts.hpp; sourceTree = "<group>"; };
+		BC98BB4E2572B74800708F15 /* manual.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = manual.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				BC98BB4325706B2D00708F15 /* connect4.hpp */,
 				BC98BB4A25706ED200708F15 /* mcts.cpp */,
 				BC98BB4B25706ED300708F15 /* mcts.hpp */,
+				BC98BB4E2572B74800708F15 /* manual.cpp */,
 			);
 			path = "MCTS-C";
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC98BB4C25706ED300708F15 /* mcts.cpp in Sources */,
+				BC98BB4F2572B74800708F15 /* manual.cpp in Sources */,
 				BC98BB4825706E8D00708F15 /* test_connect4.cpp in Sources */,
 				BC98BB3B257008D900708F15 /* main.cpp in Sources */,
 				BC98BB4425706B2D00708F15 /* connect4.cpp in Sources */,
