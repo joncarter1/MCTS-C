@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		BC98BB3B257008D900708F15 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BC98BB3A257008D900708F15 /* main.cpp */; };
 		BC98BB4425706B2D00708F15 /* connect4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BC98BB4225706B2D00708F15 /* connect4.cpp */; };
-		BC98BB4F2572B74800708F15 /* manual.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BC98BB4E2572B74800708F15 /* manual.cpp */; };
 		BC98BB5C2577EE4C00708F15 /* mcts.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BC98BB5A2577EE4C00708F15 /* mcts.cpp */; };
 /* End PBXBuildFile section */
 
@@ -30,7 +29,6 @@
 		BC98BB3A257008D900708F15 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		BC98BB4225706B2D00708F15 /* connect4.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = connect4.cpp; sourceTree = "<group>"; };
 		BC98BB4325706B2D00708F15 /* connect4.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = connect4.hpp; sourceTree = "<group>"; };
-		BC98BB4E2572B74800708F15 /* manual.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = manual.cpp; sourceTree = "<group>"; };
 		BC98BB5A2577EE4C00708F15 /* mcts.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = mcts.cpp; sourceTree = "<group>"; };
 		BC98BB5B2577EE4C00708F15 /* mcts.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = mcts.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,7 +66,6 @@
 				BC98BB3A257008D900708F15 /* main.cpp */,
 				BC98BB4225706B2D00708F15 /* connect4.cpp */,
 				BC98BB4325706B2D00708F15 /* connect4.hpp */,
-				BC98BB4E2572B74800708F15 /* manual.cpp */,
 				BC98BB5A2577EE4C00708F15 /* mcts.cpp */,
 				BC98BB5B2577EE4C00708F15 /* mcts.hpp */,
 			);
@@ -132,7 +129,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC98BB5C2577EE4C00708F15 /* mcts.cpp in Sources */,
-				BC98BB4F2572B74800708F15 /* manual.cpp in Sources */,
 				BC98BB3B257008D900708F15 /* main.cpp in Sources */,
 				BC98BB4425706B2D00708F15 /* connect4.cpp in Sources */,
 			);
