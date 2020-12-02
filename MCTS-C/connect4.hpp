@@ -58,5 +58,6 @@ public:
   void check_ldiagonal_win();
 };
 
+void test_game();
 
 #endif /* connect4_hpp */

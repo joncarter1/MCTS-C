@@ -83,15 +83,15 @@ bool Connect4Board::add_counter(int column){
   {
     cout << "Can't place counter, game already won!\n";
     return false;
+  } else if ((column < 0) or (column >= COLS))
+  {
+    cout << "Index out of range. Please enter a number between 1 and 7.\n";
+    return false;
   } else if (!check_legal(column))
   {
     cout << "Trying to place counter in a full column. Please try again.\n";
     return false;
-  } else if (not ((0 <= column) && (column < COLS)))
-  {
-    cout << "Index out of range. Please enter a number between 1 and 7.\n";
-    return false;
-  }
+  } 
   
   last_action = column;
   int row = col_tallies[column];
@@ -275,4 +275,41 @@ void Connect4Board::check_ldiagonal_win()
     }
   }
   
+}
+
+
+void test_game()
+{
+  Connect4Board game1;
+  int vertical_win_o[] = {0, 1, 0, 1, 2, 1, 0, 1};
+  for (int i = 0; i < sizeof(vertical_win_o)/sizeof(*vertical_win_o); ++i){
+    game1.add_counter(vertical_win_o[i]);
+    
+  }
+  assert(game1.check_end());
+  assert(game1.get_wintype() == "vertical");
+  
+  Connect4Board game2;
+  int horizontal_win_x[7] = {0, 0, 1, 1, 2, 2, 3};
+  for (int i = 0; i < sizeof(horizontal_win_x)/sizeof(*horizontal_win_x); ++i){
+    game2.add_counter(horizontal_win_x[i]);
+  }
+  assert(game2.check_end());
+  assert(game2.get_wintype() == "horizontal");
+  
+  Connect4Board game3;
+  int diagonal_win_x[] = {0, 1, 1, 1, 2, 2, 2, 3, 3, 3, 3};
+  for (int i = 0; i < sizeof(diagonal_win_x)/sizeof(*diagonal_win_x); ++i){
+    game3.add_counter(diagonal_win_x[i]);
+  }
+  assert(game3.check_end());
+  assert(game3.get_wintype() == "diagonal");
+  
+  Connect4Board game4;
+  int diagonal_win_o[] = {0, 0, 0, 0, 0, 1, 2, 2, 2, 3, 1, 1};
+  for (int i = 0; i < sizeof(diagonal_win_o)/sizeof(*diagonal_win_o); ++i){
+    game4.add_counter(diagonal_win_o[i]);
+  }
+  assert(game4.check_end());
+  assert(game4.get_wintype() == "off_diagonal");
 }
