@@ -1,0 +1,1 @@
+cd MCTS-C && g++ -o game_exec main.cpp connect4.cpp mcts.cpp && ./game_exec

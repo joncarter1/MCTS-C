@@ -2,16 +2,14 @@
 //  mcts.hpp
 //  MCTS-C
 //
-//  Created by Jonathan Carter on 26/11/2020.
+//  Created by Jonathan Carter on 02/12/2020.
 //
 
 #ifndef mcts_hpp
 #define mcts_hpp
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "connect4.hpp"
-using namespace std;
+#include <stdio.h>
 
 class Node{
 protected:

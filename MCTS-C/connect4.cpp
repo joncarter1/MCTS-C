@@ -277,7 +277,6 @@ void Connect4Board::check_ldiagonal_win()
   
 }
 
-
 void test_game()
 {
   Connect4Board game1;

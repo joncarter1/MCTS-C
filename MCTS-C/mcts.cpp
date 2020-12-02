@@ -2,15 +2,10 @@
 //  mcts.cpp
 //  MCTS-C
 //
-//  Created by Jonathan Carter on 26/11/2020.
+//  Created by Jonathan Carter on 02/12/2020.
 //
 
 #include "mcts.hpp"
-#include "connect4.hpp"
-#include <cmath>
-
-using namespace std;
-
 
 Node::Node(Connect4Board game, Node* parent_node, int parent_action){
   turn = game.get_turn();  // Whose turn does node correspond to?
@@ -88,7 +83,9 @@ string Node::get_turn() { return turn;}
 Node* Node::get_parent() {return parent;}
 Node* Node::get_child(int action)
 {
-  //assert(moves[action] != ILLEGAL);
+  if (children[action] == NULL){
+    return NULL;
+  }
   return children[action];
 }
 
@@ -103,11 +100,7 @@ Node* MCTSagent::_select(Node *node)
   while((node->num_unexplored_moves == 0) && !(simulation_game.check_end()))
   {
     node = node->get_best_child(false);
-    bool done = simulation_game.add_counter(node->action);  // Take action leading to best child
-    if (!done)
-    {
-      cout << "HAPPENED IN SELECTION";
-    }
+    simulation_game.add_counter(node->action);  // Take action leading to best child
   }
   return node;
 }
@@ -142,10 +135,7 @@ Node* MCTSagent::_expand(Node* node)
     ++i;
   }
   bool done = simulation_game.add_counter(action);  // Take new random action
-  if (!done)
-  {
-    cout << "HAPPENED IN EXPANSION";
-  }
+  
   Node* child = node->expand(simulation_game, action);
   return child;
 }
@@ -219,4 +209,3 @@ void MCTSagent::print_move_ratings()
   }
   cout << "]" << endl;
 }
-
