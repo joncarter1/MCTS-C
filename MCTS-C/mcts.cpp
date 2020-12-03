@@ -120,22 +120,21 @@ Node* MCTSagent::_expand(Node* node)
   int action_idx = rand() % node->num_unexplored_moves;
   
   int action = -1;
-  int i = 0;
   int j = 0;
-  while ((action == -1) && (i < 7))
+  for (int i = 0; i < 7; ++i)
   {
     if (node->moves[i] == LEGAL)
     {
       if (j == action_idx)
       {
         action = i;
+        break;
       }
       ++j;
     }
-    ++i;
   }
-  bool done = simulation_game.add_counter(action);  // Take new random action
-  
+  simulation_game.add_counter(action);  // Take new random action
+
   Node* child = node->expand(simulation_game, action);
   return child;
 }
