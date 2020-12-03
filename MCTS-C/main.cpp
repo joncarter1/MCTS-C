@@ -33,7 +33,7 @@ int main(int argc, const char * argv[]) {
         cout << "Invalid input, please enter either X or O: " << endl << endl;
       }
     }
-    cout << "Set number of search iterations per turn (Integer 10-5000). Note: 1000+ is approx. super-human." << endl;
+    cout << "Set number of search iterations per turn (Integer 10-100000). Note: 1000+ is approx. super-human." << endl;
     cout << "Enter number of iterations: " << endl;
     bool search_set = false;
     string::size_type st;
@@ -42,7 +42,7 @@ int main(int argc, const char * argv[]) {
       cin >> user_input; // Get user input from the keyboard
       try {
         search_depth = stoi(user_input, &st);
-        if ((search_depth < 10) or (search_depth > 5000)){throw invalid_argument("");}
+        if ((search_depth < 10) or (search_depth > 100000)){throw invalid_argument("");}
         cout << "Agent search depth set to : " << search_depth << endl;
         search_set = true;
       } catch(invalid_argument) {
@@ -66,7 +66,6 @@ int main(int argc, const char * argv[]) {
         cin >> user_input; // Get user input from the keyboard
         try {
           col_idx = stoi(user_input, &st);
-          cout << "USER" << col_idx << endl;
         } catch(invalid_argument) {
           col_idx = -1; // Catch conversion error
         }
@@ -96,7 +95,6 @@ int main(int argc, const char * argv[]) {
         cin >> user_input; // Get user input from the keyboard
         try {
           col_idx = stoi(user_input, &st);
-          cout << "USER" << col_idx << endl;
         } catch(invalid_argument) {
           col_idx = -1; // Catch conversion error
         }

@@ -14,7 +14,7 @@
 class Node{
 protected:
   Node *parent = NULL;
-  int c_ucb = 1;  // UCB exploration constant
+  const int c_ucb = 1;  // UCB exploration constant
   int unexplored_moves[COLS];
   Node *children[COLS]; // Possible moves are number of columns in which counter can be dropped.
   string turn;
